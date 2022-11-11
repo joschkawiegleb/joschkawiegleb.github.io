@@ -116,7 +116,8 @@ a {
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   border-bottom: dotted 1px;
   color: #1e7ac9;
-  text-decoration: none; }
+  text-decoration: none; 
+  display:inline-block;}
   a:hover {
     border-bottom-color: #1e7ac9;
     color: #1e7ac9 !important; }
