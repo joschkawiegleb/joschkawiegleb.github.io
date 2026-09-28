@@ -1,0 +1,133 @@
+/* ==========================================================================
+   custom.css  (load AFTER assets/css/main.css)
+   ========================================================================== */
+
+/* ==========================================================================
+   General & Helper Fixes
+   ========================================================================== */
+
+div a:after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 1px;
+}
+
+/* ==========================================================================
+   Main Banner Profile Image
+   ========================================================================== */
+
+#banner .image.object {
+  max-width: 320px !important;
+  margin: 0 auto !important;
+}
+
+#banner .image.object img {
+  max-height: 380px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  object-fit: cover !important;
+  border-radius: 4px !important;
+}
+
+/* ==========================================================================
+   Single-column layout for Publications, Posters, Data sets, Outreach, CV
+   ========================================================================== */
+
+.features {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+.features article {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;      /* children take full width */
+  margin: 0 0 2.5em 0 !important;       /* no left offset */
+  padding: 0 !important;                /* removes the theme's left padding */
+  position: relative !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* ==========================================================================
+   Thumbnails: centered
+   ========================================================================== */
+
+/* Undo the Editorial theme's absolute/float positioning */
+.features article .image.object,
+.features article span.image.object {
+  position: static !important;
+  float: none !important;
+  display: block !important;
+  left: auto !important;
+  top: auto !important;
+  right: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  margin: 0 0 1em 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  text-align: center !important;        /* centers the link and image */
+}
+
+/* The link around the image becomes a centered full-width block */
+.features article .image.object > a {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+
+/* Remove the stray :after box inside image links */
+.features article .image.object > a:after {
+  display: none !important;
+}
+
+.features article .image.object img {
+  position: static !important;
+  display: block !important;
+  margin: 0 auto !important;            /* centers the image */
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 220px !important;
+  object-fit: contain !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   Text: left-aligned, full width
+   ========================================================================== */
+
+.features article .content {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* ==========================================================================
+   Sidebar News Images
+   ========================================================================== */
+
+.mini-posts .image img {
+  height: 140px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  border-radius: 4px !important;
+}
