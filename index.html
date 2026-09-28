@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
@@ -12,10 +13,71 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
 		div a:after {
-		content: "";
-		display: block;
-		height: 0;
-		width: 1px;
+			content: "";
+			display: block;
+			height: 0;
+			width: 1px;
+		}
+
+		/* Main Banner Profile Image */
+		#banner .image.object {
+			max-width: 320px;
+			margin: 0 auto;
+		}
+		#banner .image.object img {
+			max-height: 380px;
+			width: auto;
+			max-width: 100%;
+			object-fit: cover;
+			border-radius: 4px;
+		}
+
+		/* Unified Card Grid for Publications & Posters */
+		.features article {
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: flex-start !important;
+			margin-bottom: 2em !important;
+			position: relative !important;
+		}
+
+		.features .image.object,
+		.features span.image.object {
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			position: relative !important;
+			width: 100% !important;
+			height: 220px !important;
+			max-height: 220px !important;
+			background-color: #fafafa !important;
+			border: 1px solid #eaeaea !important;
+			border-radius: 4px !important;
+			margin: 0 0 1em 0 !important;
+			overflow: hidden !important;
+		}
+
+		.features .image.object img,
+		.features span.image.object img {
+			position: static !important;
+			max-height: 200px !important;
+			max-width: 95% !important;
+			width: auto !important;
+			height: auto !important;
+			object-fit: contain !important;
+		}
+
+		.features article .content {
+			width: 100% !important;
+			position: relative !important;
+			z-index: 2 !important;
+		}
+
+		.mini-posts .image img {
+			height: 140px;
+			width: 100%;
+			object-fit: cover;
+			border-radius: 4px;
 		}
 		</style>
 		
@@ -49,7 +111,7 @@
 											<h2>PhD Environmental Science</h2>
 										</header>
 										<p>One of the most pressing challenges of our time is ensuring that environmental development proceeds sustainably. My research contributes to this effort by advancing fundamental understanding of how aquatic ecosystems can be managed responsibly, focusing on fish swimming behaviour in complex flow conditions. By integrating ecology, hydraulic engineering, and artificial intelligence, I seek to uncover the key mechanisms that shape fish movement in flowing water.</p>
-										<p>In my research, I explore the relationship between hydrodynamic stimuli and the swimming behaviour of fish using modern technologies, such as Particle Image Velocimetry, Computational Fluid Dynamics, Video tracking, and Acoustic telemetry. Machine learning approaches, such as Random Forest or Artificial Neural Networks, are used to identify and visualize complex patterns within these multivariate data sets. </p>
+										<p>In my research, I explore the relationship between hydrodynamic stimuli and the swimming behaviour of fish using modern technologies, such as Particle Image Velocimetry, Computational Fluid Dynamics, Video tracking, and Acoustic telemetry. Machine learning approaches, such as Random Forest or Artificial Neural Networks, are used to identify and visualize complex patterns within these multivariate data sets.</p>
 										<p>During my PhD, I examined the swimming behaviour of multiple fish species using video analysis, AI-based tracking, force measurements, and Acoustic Doppler velocimetry. These methods enabled me to characterize species-specific behaviours within fish passes. Building on these insights, I helped develop a prototype hydraulic barrier designed to block the upstream migration of the invasive round goby while still allowing native fish species to pass.</p>
 										<p>I am a postdoctoral researcher at the <a href="https://www.kau.se/en/faculty-health-science-and-technology/about-faculty/departments-and-disciplines/department">Department of Environmental and Life Sciences</a>, Karlstad University, Sweden.</p>
 										<a href="https://scholar.google.com/citations?user=UQjxAjIAAAAJ&hl">Google Scholar</a>
@@ -104,7 +166,7 @@
 									<article>
 										<div class="content">
 											<h3>PostDoc in Southampton</h3>
-											<p style="color:grey">I worked as a Postdoc at the University of Southampton, United Kingdom, from 02/2023 to 08/2024. My research was focused on understanding fish swimming patterns in critical flow. The <a href='https://data.snf.ch/grants/grant/214358'>project</a> was funded by the Swiss National Science Foundation (SNSF). </p>
+											<p style="color:grey">I worked as a Postdoc at the University of Southampton, United Kingdom, from 02/2023 to 08/2024. My research was focused on understanding fish swimming patterns in critical flow. The <a href='https://data.snf.ch/grants/grant/214358'>project</a> was funded by the Swiss National Science Foundation (SNSF).</p>
 										</div>
 									</article>
 									<article>
@@ -142,181 +204,145 @@
 								
 							<!-- Section: Publications -->
 								<section>
-									<div class="content">
-										<header class="major" id="Publications_link_destination">
-											<h2>Publications</h2>
-										</header>
-										
+									<header class="major" id="Publications_link_destination">
+										<h2>Publications</h2>
+									</header>
+									
+									<div class="features">
 										<!-- Publication 9 -->
-										<div class="features">
-											<article>
-												<span class="image object">
-													<a style="text-decoration:none" href="https://doi.org/10.1242/bio.060533">
-														<img src="/assets/images/bio06053303.png" alt="Publication figure" />
-													</a>
-												</span>
-											</article>
-											<article>
-												<div class="content">
-													<a style="text-decoration:none" href="https://doi.org/10.1242/bio.060533">
-														<h3>Does swimming at the bottom serve as a hydraulic advantage for benthic fish [<i>Neogobius melanostomus</i> Pallas (1814)] in flowing water?</h3>
-														<p style="color:grey">Nandhakumar Govindasamy, Georg Rauter, Frank Seidel, Patricia Burkhardt-Holm, Philipp E. Hirsch, <strong>Joschka Wiegleb</strong> (2024) Biology Open</p>
-													</a>
-												</div>
-											</article>
-										</div>
+										<article>
+											<span class="image object">
+												<a style="text-decoration:none" href="https://doi.org/10.1242/bio.060533">
+													<img src="/assets/images/bio06053303.png" alt="Publication figure" />
+												</a>
+											</span>
+											<div class="content">
+												<a style="text-decoration:none" href="https://doi.org/10.1242/bio.060533">
+													<h3>Does swimming at the bottom serve as a hydraulic advantage for benthic fish [<i>Neogobius melanostomus</i> Pallas (1814)] in flowing water?</h3>
+													<p style="color:grey">Nandhakumar Govindasamy, Georg Rauter, Frank Seidel, Patricia Burkhardt-Holm, Philipp E. Hirsch, <strong>Joschka Wiegleb</strong> (2024) Biology Open</p>
+												</a>
+											</div>
+										</article>
 
 										<!-- Publication 8 -->
-										<div class="features">
-											<article>
-												<span class="image object">
-													<a style="text-decoration:none" href="https://doi.org/10.3389/fenvs.2023.1156248">
-														<img src="/assets/images/Fig4_Trajectories.png" alt="Trajectories figure" />
-													</a>
-												</span>
-											</article>
-											<article>
-												<div class="content">
-													<a style="text-decoration:none" href="https://doi.org/10.3389/fenvs.2023.1156248">
-														<h3>Round goby [<i>Neogobius melanostomus</i> (Pallas, 1814)], gudgeon (<i>Gobio gobio</i> L.) and bullhead (<i>Cottus gobio</i> L.) show distinct swimming patterns in a vertical slot fish pass</h3>
-														<p style="color:grey"><strong>Joschka Wiegleb</strong>, Philipp E. Hirsch, Frank Seidel, Georg Rauter, Patricia Burkhardt-Holm (2023) Frontiers in Environmental Science</p>
-													</a>
-												</div>
-											</article>
-										</div>
+										<article>
+											<span class="image object">
+												<a style="text-decoration:none" href="https://doi.org/10.3389/fenvs.2023.1156248">
+													<img src="/assets/images/Fig4_Trajectories.png" alt="Trajectories figure" />
+												</a>
+											</span>
+											<div class="content">
+												<a style="text-decoration:none" href="https://doi.org/10.3389/fenvs.2023.1156248">
+													<h3>Round goby [<i>Neogobius melanostomus</i> (Pallas, 1814)], gudgeon (<i>Gobio gobio</i> L.) and bullhead (<i>Cottus gobio</i> L.) show distinct swimming patterns in a vertical slot fish pass</h3>
+													<p style="color:grey"><strong>Joschka Wiegleb</strong>, Philipp E. Hirsch, Frank Seidel, Georg Rauter, Patricia Burkhardt-Holm (2023) Frontiers in Environmental Science</p>
+												</a>
+											</div>
+										</article>
 
 										<!-- Publication 7 -->
-										<div class="features">
-											<article>
-												<span class="image object">
-													<a style="text-decoration:none" href="https://doi.org/10.1111/eff.12696">
-														<img src="/assets/images/Slot_ForceMaps.jpg" alt="Force maps figure" />
-													</a>
-												</span>
-											</article>
-											<article>
-												<div class="content">
-													<a style="text-decoration:none" href="https://doi.org/10.1111/eff.12696" id="ForcesSlot_link_destination">
-														<h3>Impact of hydraulic forces on the passage of round goby (<i>Neogobius melanostomus</i>), gudgeon (<i>Gobio gobio</i>) and bullhead (<i>Cottus gobio</i>) in a vertical slot fish pass</h3>
-														<p style="color:grey"><strong>Joschka Wiegleb</strong>, Philipp E. Hirsch, Frank Seidel, Georg Rauter, Patricia Burkhardt-Holm (2022) Ecology of Freshwater Fish</p>
-													</a>
-												</div>
-											</article>
-										</div>
+										<article>
+											<span class="image object">
+												<a style="text-decoration:none" href="https://doi.org/10.1111/eff.12696">
+													<img src="/assets/images/Slot_ForceMaps.jpg" alt="Force maps figure" />
+												</a>
+											</span>
+											<div class="content">
+												<a style="text-decoration:none" href="https://doi.org/10.1111/eff.12696" id="ForcesSlot_link_destination">
+													<h3>Impact of hydraulic forces on the passage of round goby (<i>Neogobius melanostomus</i>), gudgeon (<i>Gobio gobio</i>) and bullhead (<i>Cottus gobio</i>) in a vertical slot fish pass</h3>
+													<p style="color:grey"><strong>Joschka Wiegleb</strong>, Philipp E. Hirsch, Frank Seidel, Georg Rauter, Patricia Burkhardt-Holm (2022) Ecology of Freshwater Fish</p>
+												</a>
+											</div>
+										</article>
 
 										<!-- Publication 6 -->
-										<div class="features">
-											<article>
-												<span class="image object">
-													<a href="https://doi.org/10.17895/ices.pub.21345291">
-														<img src="/assets/images/ICES_workshop.jpg" alt="ICES workshop cover" />
-													</a>
-												</span>
-											</article>
-											<article>
-												<div class="content">
-													<a href="https://doi.org/10.17895/ices.pub.21345291" id="WKSTARGATE_link_destination">
-														<h3>Workshop on stickleback and round goby in the Baltic Sea (WKSTARGATE)</h3>
-														<p style="color:grey">Jane Behrens, Ulf Bergström, Jost Borcherding, Guillaume Carruel, Ann-Britt Florin, Leon Green, Christina Henseler, Dunja Jusufovski, Juha Lilja, Nicholas P. Moran, Henrik Mosegaard, Rahmat Naddafi, Kristiina Nõomaa, Daniel Oesterwind, Henn Ojaveer, Jens Olsson, Eva Maria Pedersen, Riikka Puntila-Dood, Ivars Putnis, Loreta Rozenfelde, Anders Persson, <strong>Joschka Wiegleb</strong>, Jaroslaw Zielinski (2022) ICES Scientific Reports</p>
-													</a>
-												</div>
-											</article>
-										</div>
+										<article>
+											<span class="image object">
+												<a href="https://doi.org/10.17895/ices.pub.21345291">
+													<img src="/assets/images/ICES_workshop.jpg" alt="ICES workshop cover" />
+												</a>
+											</span>
+											<div class="content">
+												<a href="https://doi.org/10.17895/ices.pub.21345291" id="WKSTARGATE_link_destination">
+													<h3>Workshop on stickleback and round goby in the Baltic Sea (WKSTARGATE)</h3>
+													<p style="color:grey">Jane Behrens, Ulf Bergström, Jost Borcherding, Guillaume Carruel, Ann-Britt Florin, Leon Green, Christina Henseler, Dunja Jusufovski, Juha Lilja, Nicholas P. Moran, Henrik Mosegaard, Rahmat Naddafi, Kristiina Nõomaa, Daniel Oesterwind, Henn Ojaveer, Jens Olsson, Eva Maria Pedersen, Riikka Puntila-Dood, Ivars Putnis, Loreta Rozenfelde, Anders Persson, <strong>Joschka Wiegleb</strong>, Jaroslaw Zielinski (2022) ICES Scientific Reports</p>
+												</a>
+											</div>
+										</article>
 									
 										<!-- Publication 5 -->
-										<div class="features">
-											<article>
-												<span class="image object">
-													<a href="https://link.springer.com/article/10.1007/s10750-021-04762-z">
-														<img src="/assets/images/Fig5_PresenceMaps.jpg" alt="Presence maps figure" />
-													</a>
-												</span>
-											</article>
-											<article>
-												<div class="content">
-													<a href="https://link.springer.com/article/10.1007/s10750-021-04762-z">
-														<h3>Flow, force, behaviour: assessment of a prototype hydraulic barrier for invasive fish</h3>
-														<p style="color:grey"><strong>Joschka Wiegleb</strong>, Philipp E. Hirsch, Frank Seidel, Georg Rauter, Patricia Burkhardt-Holm (2022) Hydrobiologia</p>
-													</a>
-												</div>
-											</article>
-										</div>
+										<article>
+											<span class="image object">
+												<a href="https://link.springer.com/article/10.1007/s10750-021-04762-z">
+													<img src="/assets/images/Fig5_PresenceMaps.jpg" alt="Presence maps figure" />
+												</a>
+											</span>
+											<div class="content">
+												<a href="https://link.springer.com/article/10.1007/s10750-021-04762-z">
+													<h3>Flow, force, behaviour: assessment of a prototype hydraulic barrier for invasive fish</h3>
+													<p style="color:grey"><strong>Joschka Wiegleb</strong>, Philipp E. Hirsch, Frank Seidel, Georg Rauter, Patricia Burkhardt-Holm (2022) Hydrobiologia</p>
+												</a>
+											</div>
+										</article>
 										
 										<!-- Publication 4 -->
-										<div class="features">
-											<article>
-												<span class="image object">
-													<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/eff.12592">
-														<img src="/assets/images/Figure 1 Egger et al.png" alt="Figure from Egger et al." />
-													</a>
-												</span>
-											</article>
-											<article>
-												<div class="content">
-													<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/eff.12592">
-														<h3>Comparative swimming performance and behaviour of three benthic fish species: The invasive round goby (Neogobius melanostomus), the native bullhead (Cottus gobio), and the native gudgeon (Gobio gobio)</h3>
-														<p style="color:grey">Bernd Egger, <strong>Joschka Wiegleb</strong>, Frank Seidel, Patricia Burkhardt-Holm, Philipp Hirsch (2021) Ecology of Freshwater Fish</p>
-													</a>
-												</div>
-											</article>
-										</div>
+										<article>
+											<span class="image object">
+												<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/eff.12592">
+													<img src="/assets/images/Figure 1 Egger et al.png" alt="Figure from Egger et al." />
+												</a>
+											</span>
+											<div class="content">
+												<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/eff.12592">
+													<h3>Comparative swimming performance and behaviour of three benthic fish species: The invasive round goby (Neogobius melanostomus), the native bullhead (Cottus gobio), and the native gudgeon (Gobio gobio)</h3>
+													<p style="color:grey">Bernd Egger, <strong>Joschka Wiegleb</strong>, Frank Seidel, Patricia Burkhardt-Holm, Philipp Hirsch (2021) Ecology of Freshwater Fish</p>
+												</a>
+											</div>
+										</article>
 										
 										<!-- Publication 3 -->
-										<div class="features">
-											<article>
-												<span class="image object">
-													<a href="https://www.sciencedirect.com/science/article/pii/S0075951120301742">
-														<img src="/assets/images/Figure6.jpg" alt="Flow field figure" />
-													</a>
-												</span>
-											</article>
-											<article>
-												<div class="content">
-													<a href="https://www.sciencedirect.com/science/article/pii/S0075951120301742">
-														<h3>Flow field-induced drag forces and swimming behaviour of three benthic fish species </h3>
-														<p style="color:grey"><strong>Joschka Wiegleb</strong>, Philipp E. Hirsch, Bernd Egger, Frank Seidel, Patricia Burkhardt-Holm (2020) Limnologica</p>
-													</a>
-												</div>
-											</article>
-										</div>
+										<article>
+											<span class="image object">
+												<a href="https://www.sciencedirect.com/science/article/pii/S0075951120301742">
+													<img src="/assets/images/Figure6.jpg" alt="Flow field figure" />
+												</a>
+											</span>
+											<div class="content">
+												<a href="https://www.sciencedirect.com/science/article/pii/S0075951120301742">
+													<h3>Flow field-induced drag forces and swimming behaviour of three benthic fish species</h3>
+													<p style="color:grey"><strong>Joschka Wiegleb</strong>, Philipp E. Hirsch, Bernd Egger, Frank Seidel, Patricia Burkhardt-Holm (2020) Limnologica</p>
+												</a>
+											</div>
+										</article>
 										
 										<!-- Publication 2 -->
-										<div class="features">
-											<article>
-												<span class="image object">
-													<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/aqc.3409">
-														<img src="/assets/images/GobyDistribution.jpg" alt="Distribution map" />
-													</a>
-												</span>
-											</article>
-											<article>
-												<div class="content">
-													<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/aqc.3409">
-														<h3>Predation on native fish eggs by invasive round goby revealed by species-specific gut content DNA analyses </h3>
-														<p style="color:grey">Elisabeth Lutz, Philipp E. Hirsch, Karen Bussmann, <strong>Joschka Wiegleb</strong>, Hans P. Jermann, Roxane Muller, Patricia Burkhardt-Holm, Irene Adrian-Kalchhauser (2020) Aquatic Conservation: Marine and Freshwater Ecosystems</p>
-													</a>
-												</div>
-											</article>
-										</div>
+										<article>
+											<span class="image object">
+												<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/aqc.3409">
+													<img src="/assets/images/GobyDistribution.jpg" alt="Distribution map" />
+												</a>
+											</span>
+											<div class="content">
+												<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/aqc.3409">
+													<h3>Predation on native fish eggs by invasive round goby revealed by species-specific gut content DNA analyses</h3>
+													<p style="color:grey">Elisabeth Lutz, Philipp E. Hirsch, Karen Bussmann, <strong>Joschka Wiegleb</strong>, Hans P. Jermann, Roxane Muller, Patricia Burkhardt-Holm, Irene Adrian-Kalchhauser (2020) Aquatic Conservation: Marine and Freshwater Ecosystems</p>
+												</a>
+											</div>
+										</article>
 										
 										<!-- Publication 1 -->
-										<div class="features">
-											<article>
-												<span class="image object">
-													<a href="https://www.tandfonline.com/doi/full/10.1080/17451000.2019.1577977">
-														<img src="/assets/images/herring.jpeg" alt="Atlantic herring" />
-													</a>
-												</span>
-											</article>
-											<article>
-												<div class="content">
-													<a href="https://www.tandfonline.com/doi/full/10.1080/17451000.2019.1577977">
-														<h3>Predation of the round goby (Neogobius melanostomus Pallas, 1814) on Atlantic herring eggs in the Western Baltic Sea </h3>
-														<p style="color:grey"><strong>Joschka Wiegleb</strong>, Paul Kotterba, Cornelius Hammer, Daniel Oesterwind (2018) Marine Biology Research</p>
-													</a>
-												</div>
-											</article>
-										</div>
+										<article>
+											<span class="image object">
+												<a href="https://www.tandfonline.com/doi/full/10.1080/17451000.2019.1577977">
+													<img src="/assets/images/herring.jpeg" alt="Atlantic herring" />
+												</a>
+											</span>
+											<div class="content">
+												<a href="https://www.tandfonline.com/doi/full/10.1080/17451000.2019.1577977">
+													<h3>Predation of the round goby (Neogobius melanostomus Pallas, 1814) on Atlantic herring eggs in the Western Baltic Sea</h3>
+													<p style="color:grey"><strong>Joschka Wiegleb</strong>, Paul Kotterba, Cornelius Hammer, Daniel Oesterwind (2018) Marine Biology Research</p>
+												</a>
+											</div>
+										</article>
 									</div>
 								</section>
 								
@@ -359,22 +385,18 @@
 								
 							<!-- Section: Posters -->
 								<section>
-									<div class="content">
-										<header class="major" id="Poster_link_destination">
-											<h2>Poster</h2>
-										</header>
-									</div>
+									<header class="major" id="Poster_link_destination">
+										<h2>Poster</h2>
+									</header>
 
-									<!-- Poster 1 -->
 									<div class="features">
+										<!-- Poster 1 -->
 										<article>
 											<span class="image object">
 												<a href="/assets/files/Poster_Wiegleb_FSBI_A4.pdf">
 													<img src="/assets/images/Poster_Wiegleb_FSBI_A4.png" alt="FSBI Poster" />
 												</a>
 											</span>
-										</article>
-										<article>
 											<div class="content">
 												<a href="/assets/files/Poster_Wiegleb_FSBI_A4.pdf">
 													<h3>Lessons from a gummy fish: How do fish modulate their swimming trajectories when swimming through critical flow?</h3>
@@ -382,18 +404,14 @@
 												</a>
 											</div>
 										</article>
-									</div>
 
-									<!-- Poster 2 -->
-									<div class="features">
+										<!-- Poster 2 -->
 										<article>
 											<span class="image object">
 												<a href="/assets/files/Poster_INTECOL_Wiegleb.pdf">
 													<img src="/assets/images/Poster_INTECOL_Wiegleb-01.jpg" alt="INTECOL Poster" />
 												</a>
 											</span>
-										</article>
-										<article>
 											<div class="content">
 												<a href="/assets/files/Poster_INTECOL_Wiegleb.pdf">
 													<h3>Swimming competition! Who beats the flow in a hydraulic barrier for invasive fish?</h3>
@@ -402,18 +420,14 @@
 												</a>
 											</div>
 										</article>
-									</div>
-									
-									<!-- Poster 3 -->
-									<div class="features">
+										
+										<!-- Poster 3 -->
 										<article>
 											<span class="image object">
 												<a href="/assets/files/Poster_Wiegleb_et_al._2018_Do round gobies overcome strong currents in fish passes application of 3d printed fish.pdf">
 													<img src="/assets/images/Poster_Do-round-gobies-overcome.jpg" alt="Chioggia Poster" />
 												</a>
 											</span>
-										</article>
-										<article>
 											<div class="content">
 												<a href="/assets/files/Poster_Wiegleb_et_al._2018_Do round gobies overcome strong currents in fish passes application of 3d printed fish.pdf">
 													<h3>Do round gobies overcome strong currents in fish passes? –Application of 3D-printed fish</h3>
@@ -421,18 +435,14 @@
 												</a>
 											</div>
 										</article>
-									</div>
-									
-									<!-- Poster 4 -->
-									<div class="features">
+										
+										<!-- Poster 4 -->
 										<article>
 											<span class="image object">
 												<a href="/assets/files/20171006_Poster_Wiegleb_et_al._2017_Trophic interactions of invasive round goby and baltic herring eggs_I.pdf">
 													<img src="/assets/images/Poster_Trophic-interactions.jpg" alt="Trophic interactions poster" />
 												</a>
 											</span>
-										</article>
-										<article>
 											<div class="content">
 												<a href="/assets/files/20171006_Poster_Wiegleb_et_al._2017_Trophic interactions of invasive round goby and baltic herring eggs_I.pdf">
 													<h3>Trophic interactions of invasive round goby (Neogobius melanostomus) and Baltic herring eggs</h3>
@@ -448,8 +458,8 @@
 									<header class="major" id="data_sets_link_destination">
 										<h2>Data sets</h2>
 									</header>
-									<!-- Data set 2 -->
 									<div class="features">
+										<!-- Data set 2 -->
 										<article>
 											<div class="content">
 												<a href="https://doi.org/10.6084/m9.figshare.27101413.v1">
@@ -458,9 +468,7 @@
 												</a>
 											</div>
 										</article>
-									</div>
-									<!-- Data set 1 -->
-									<div class="features">
+										<!-- Data set 1 -->
 										<article>
 											<div class="content">
 												<a href="https://doi.org/10.6084/m9.figshare.27101665.v1">
@@ -477,8 +485,8 @@
 									<header class="major" id="Outreach_activities_link_destination">
 										<h2>Outreach activities</h2>
 									</header>
-									<!-- Activity 3 -->
 									<div class="features">
+										<!-- Activity 3 -->
 										<article>
 											<div class="content">
 												<a href="https://www.unibas.ch/de/Aktuell/-Veranstaltungen/Uni-am-Markt.html" id="Uni_Markt_link_destination">
@@ -487,9 +495,7 @@
 												</a>
 											</div>
 										</article>
-									</div>
-									<!-- Activity 2 -->
-									<div class="features">
+										<!-- Activity 2 -->
 										<article>
 											<div class="content">
 												<a href="assets/files/regio-60-2-Wiegleb-6.pdf">
@@ -498,9 +504,7 @@
 												</a>
 											</div>
 										</article>
-									</div>
-									<!-- Activity 1 -->
-									<div class="features">
+										<!-- Activity 1 -->
 										<article>
 											<div class="content">
 												<h3>Wissenschaftsapéro</h3>
@@ -629,5 +633,4 @@
 
 	</body>
 </html>
-
 
