@@ -46,33 +46,40 @@
 			align-items: flex-start !important;
 			margin-bottom: 2.5em !important;
 			position: relative !important;
+			background: transparent !important;
+			border: none !important;
 		}
 
-		/* Thumbnail Container */
+		/* Thumbnail Container - completely transparent, no border */
 		.features .image.object,
 		.features span.image.object {
 			display: flex !important;
 			align-items: center !important;
-			justify-content: center !important;
+			justify-content: flex-start !important;
 			position: relative !important;
 			width: 100% !important;
-			height: 220px !important;
-			max-height: 220px !important;
-			background-color: #fafafa !important;
-			border: 1px solid #eaeaea !important;
-			border-radius: 4px !important;
+			height: auto !important;
+			max-height: 240px !important;
+			background: transparent !important;
+			background-color: transparent !important;
+			border: none !important;
+			box-shadow: none !important;
+			outline: none !important;
+			border-radius: 0 !important;
 			margin: 0 0 1em 0 !important;
-			overflow: hidden !important;
+			overflow: visible !important;
 		}
 
 		.features .image.object img,
 		.features span.image.object img {
 			position: static !important;
-			max-height: 200px !important;
-			max-width: 95% !important;
+			max-height: 220px !important;
+			max-width: 100% !important;
 			width: auto !important;
 			height: auto !important;
 			object-fit: contain !important;
+			border-radius: 4px !important;
+			box-shadow: none !important;
 		}
 
 		.features article .content {
