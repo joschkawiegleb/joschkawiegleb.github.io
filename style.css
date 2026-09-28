@@ -1,62 +1,39 @@
 /* ==========================================================================
-   Image Sizing & Consistency Rules
+   Single-Column Layout & Image Sizing Overrides
    ========================================================================== */
 
-/* 1. Main Profile Photo in Banner */
+/* Main Banner Profile Image */
 #banner .image.object {
-  max-width: 320px;
-  margin: 0 auto;
+  max-width: 320px !important;
+  margin: 0 auto !important;
 }
 
 #banner .image.object img {
-  max-height: 380px;
-  width: auto;
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 4px;
+  max-height: 380px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  object-fit: cover !important;
+  border-radius: 4px !important;
 }
 
-/* 2. Publication & Poster Thumbnails */
-.features .image.object {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 220px;              /* Uniform box height */
-  width: 100%;
-  background-color: #f7f7f7;   /* Clean background for figures with whitespace */
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 1em;
+/* Force Single Column on Features */
+.features {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
 }
 
-.features .image.object img {
-  max-height: 200px;          /* Prevents oversize vertical figures/posters */
-  max-width: 100%;            /* Prevents horizontal overflow */
-  width: auto;
-  height: auto;
-  object-fit: contain;        /* Preserves figure aspect ratio without cropping */
-}
-
-/* 3. Sidebar News Thumbnails */
-.mini-posts .image img {
-  height: 140px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* --- Fix for Overlapping Publications / Posters --- */
-
-/* 1. Ensure the grid items stack cleanly without absolute positioning collisions */
 .features article {
+  width: 100% !important;
+  max-width: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
-  margin-bottom: 2em !important;
+  margin-bottom: 2.5em !important;
   position: relative !important;
 }
 
-/* 2. Turn off the default HTML5 UP absolute full-cover behavior */
+/* Unified Card Thumbnails */
 .features .image.object,
 .features span.image.object {
   display: flex !important;
@@ -64,7 +41,7 @@
   justify-content: center !important;
   position: relative !important;
   width: 100% !important;
-  height: 220px !important;       /* Uniform thumbnail box height */
+  height: 220px !important;
   max-height: 220px !important;
   background-color: #fafafa !important;
   border: 1px solid #eaeaea !important;
@@ -73,20 +50,65 @@
   overflow: hidden !important;
 }
 
-/* 3. Constrain the images themselves */
 .features .image.object img,
 .features span.image.object img {
   position: static !important;
-  max-height: 200px !important;   /* Fits inside the 220px box */
+  max-height: 200px !important;
   max-width: 95% !important;
   width: auto !important;
   height: auto !important;
-  object-fit: contain !important; /* Never distorts or crops scientific diagrams */
+  object-fit: contain !important;
 }
 
-/* 4. Keep text positioned normally below the image */
 .features article .content {
   width: 100% !important;
   position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Sidebar News Images */
+.mini-posts .image img {
+  height: 140px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  border-radius: 4px !important;
+}
+
+/* ==========================================================================
+   Website Counter & Reset Button
+   ========================================================================== */
+
+.website-counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.website-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff4957;
+  height: 50px;
+  width: 80px;
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+#reset {
+  margin-top: 20px;
+  background-color: #008cba;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 20px;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+}
   z-index: 2 !important;
 }
