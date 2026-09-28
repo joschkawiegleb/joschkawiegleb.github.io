@@ -74,41 +74,5 @@
   border-radius: 4px !important;
 }
 
-/* ==========================================================================
-   Website Counter & Reset Button
-   ========================================================================== */
-
-.website-counter-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 20px 0;
-}
-
-.website-counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ff4957;
-  height: 50px;
-  width: 80px;
-  color: white;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 25px;
-  margin-top: 10px;
-}
-
-#reset {
-  margin-top: 20px;
-  background-color: #008cba;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 8px 20px;
-  color: white;
-  border: 0;
-  border-radius: 4px;
-}
   z-index: 2 !important;
 }
