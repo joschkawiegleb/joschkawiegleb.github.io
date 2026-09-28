@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
@@ -32,15 +31,24 @@
 			border-radius: 4px;
 		}
 
-		/* Unified Card Grid for Publications & Posters */
+		/* Force Single Column on Features */
+		.features {
+			display: flex !important;
+			flex-direction: column !important;
+			width: 100% !important;
+		}
+
 		.features article {
+			width: 100% !important;
+			max-width: 100% !important;
 			display: flex !important;
 			flex-direction: column !important;
 			align-items: flex-start !important;
-			margin-bottom: 2em !important;
+			margin-bottom: 2.5em !important;
 			position: relative !important;
 		}
 
+		/* Thumbnail Container */
 		.features .image.object,
 		.features span.image.object {
 			display: flex !important;
@@ -633,4 +641,3 @@
 
 	</body>
 </html>
-
