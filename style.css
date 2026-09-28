@@ -1,35 +1,49 @@
-/* Center child elements */
-body,
-.website-counter {
+/* ==========================================================================
+   Image Sizing & Consistency Rules
+   ========================================================================== */
+
+/* 1. Main Profile Photo in Banner */
+#banner .image.object {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+#banner .image.object img {
+  max-height: 380px;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 2. Publication & Poster Thumbnails */
+.features .image.object {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  height: 220px;              /* Uniform box height */
+  width: 100%;
+  background-color: #f7f7f7;   /* Clean background for figures with whitespace */
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1em;
 }
 
-body {
-  height: 100vh;
+.features .image.object img {
+  max-height: 200px;          /* Prevents oversize vertical figures/posters */
+  max-width: 100%;            /* Prevents horizontal overflow */
+  width: auto;
+  height: auto;
+  object-fit: contain;        /* Preserves figure aspect ratio without cropping */
 }
 
-/* Styles for website counter container */
-.website-counter {
-  background-color: #ff4957;
-  height: 50px;
-  width: 80px;
-  color: white;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 25px;
-  margin-top: 10px;
+/* 3. Sidebar News Thumbnails */
+.mini-posts .image img {
+  height: 140px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-/* Styles for reset button */
-#reset {
-  margin-top: 20px;
-  background-color: #008cba;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 8px 20px;
-  color: white;
-  border: 0;
+
 }
