@@ -45,5 +45,48 @@
   border-radius: 4px;
 }
 
+/* --- Fix for Overlapping Publications / Posters --- */
 
+/* 1. Ensure the grid items stack cleanly without absolute positioning collisions */
+.features article {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  margin-bottom: 2em !important;
+  position: relative !important;
+}
+
+/* 2. Turn off the default HTML5 UP absolute full-cover behavior */
+.features .image.object,
+.features span.image.object {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 220px !important;       /* Uniform thumbnail box height */
+  max-height: 220px !important;
+  background-color: #fafafa !important;
+  border: 1px solid #eaeaea !important;
+  border-radius: 4px !important;
+  margin: 0 0 1em 0 !important;
+  overflow: hidden !important;
+}
+
+/* 3. Constrain the images themselves */
+.features .image.object img,
+.features span.image.object img {
+  position: static !important;
+  max-height: 200px !important;   /* Fits inside the 220px box */
+  max-width: 95% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important; /* Never distorts or crops scientific diagrams */
+}
+
+/* 4. Keep text positioned normally below the image */
+.features article .content {
+  width: 100% !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
