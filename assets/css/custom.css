@@ -14,22 +14,46 @@ div a:after {
 }
 
 /* ==========================================================================
-   Main Banner Profile Image
+   Main Banner: split screen (text left, image right)
    ========================================================================== */
 
+#banner {
+  align-items: stretch !important;
+}
+
+#banner .content {
+  width: 50% !important;
+  align-self: center !important;
+}
+
 #banner .image.object {
-  max-width: 320px !important;
-  margin: 0 auto !important;
+  width: 50% !important;
+  max-width: none !important;
+  margin: 0 0 2em 4em !important;
+  min-height: 32em;
 }
 
 #banner .image.object img {
-  max-height: 380px !important;
-  width: auto !important;
-  max-width: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
   object-fit: cover !important;
+  object-position: center 25% !important;  /* keeps the face in frame */
   border-radius: 4px !important;
 }
 
+/* Portrait screens (phones/tablets): the theme stacks image above text */
+@media screen and (orientation: portrait) {
+  #banner .content {
+    width: 100% !important;
+  }
+  #banner .image.object {
+    width: 100% !important;
+    margin: 0 0 3em 0 !important;
+    min-height: 0;
+  }
+}
 /* ==========================================================================
    Single-column layout for Publications, Posters, Data sets, Outreach, CV
    ========================================================================== */
